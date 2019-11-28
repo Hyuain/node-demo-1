@@ -30,7 +30,7 @@ var server = http.createServer(function (request, response) {
             <link rel="stylesheet" href="x">
         </head>
         <body>
-            <h1>标题</h1>
+            <h1>这是一个h1标签</h1>
             <script src="y"></script>
         </body>
         `)
@@ -38,7 +38,7 @@ var server = http.createServer(function (request, response) {
     } else if (path === '/x') {
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/css;charset=utf-8')
-        response.write(`body{color: red;}`)
+        response.write(`h1{color: red;}`)
         response.end()
     } else if (path === '/y') {
         response.statusCode = 200
