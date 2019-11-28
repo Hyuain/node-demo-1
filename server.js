@@ -33,6 +33,7 @@ var server = http.createServer(function (request, response) {
             <h1>这是一个h1标签</h1>
             <script src="y"></script>
         </body>
+
         `)
         response.end()
     } else if (path === '/x') {
@@ -43,7 +44,6 @@ var server = http.createServer(function (request, response) {
     } else if (path === '/y') {
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
-        response.write(`console.log('这是JS内容')`)
         response.end()
     }
     else {
